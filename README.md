@@ -18,3 +18,7 @@ Litreture review struture - https://docs.google.com/document/d/1ShTjqXpKcEQ2d7wm
 Past FYP projects - https://docs.google.com/spreadsheets/d/1iaDG9pUIJQNYAHMYFq0uStdTzgLah2d1ODMfQlfqjCg/edit#gid=10835512
 
 Research Papers - https://sci-hub.se/
+
+Canva Diagrams - https://www.canva.com/folder/FAF1oNE0SrA
+
+FYP Reports - https://drive.google.com/drive/folders/13oZezcOKrhu7M4l-lF7DHNQMz93FTOxC?usp=drive_link
