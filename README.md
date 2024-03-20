@@ -7,8 +7,8 @@ The Sri Lankan Lawyer Chatbot is a specialized chatbot designed to provide answe
 - **Legal Query Resolution**: The chatbot can answer a wide range of legal queries based on Sri Lankan law.
 - **Domain-Specific Dataset Creation Pipeline**: Developers can leverage the pipeline to create their own domain-specific chatbot.
 
-## Usage
-The chatbot can be used in Discord. Simply invite the bot to your server and start asking your legal queries!
+## Usage 
+The chatbot can be used in [Discord](https://discord.com/oauth2/authorize?client_id=1219937929330425967&permissions=2183991392320&scope=bot). Simply invite the bot to your server and start asking your legal queries! but note the server wont be up all times
 
 ## Installation
 The chatbot can be run on a T4 Colab. Detailed instructions on how to set up and run the chatbot will be provided soon.
