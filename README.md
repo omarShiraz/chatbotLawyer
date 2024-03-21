@@ -10,11 +10,82 @@ The Sri Lankan Lawyer Chatbot is a specialized chatbot designed to provide answe
 ## Usage 
 The chatbot can be used in [Discord](https://discord.com/oauth2/authorize?client_id=1219937929330425967&permissions=2183991392320&scope=bot). Simply invite the bot to your server and start asking your legal queries! but note the server wont be up all times
 
-## Installation
-The chatbot can be run on a T4 Colab. Detailed instructions on how to set up and run the chatbot will be provided soon.
+## Installation steps for Domain Specific Dataset creation
 
-## Contributing
+## 1. Clone the Questgen repository and install dependencies
+
+Clone the Questgen repository to your Colab environment and install the necessary dependencies using the following command:
+
+~~~
+!pip install --upgrade --verbose git+https://github.com/omarShiraz/Questgen.ai.git
+~~~
+
+## 2. Install other dependencies
+
+Install all other dependencies using the following commands:
+
+~~~
+!pip install fitz
+!pip install PyMuPDF
+!pip install transformers
+!pip install --upgrade numpy
+!pip install spaCy==2.3.3
+!pip install --quiet git+https://github.com/boudinfl/pke.git
+!python -m nltk.downloader universal_tagset
+!python -m spacy download en_core_web_sm
+~~~
+After installing these dependencies, make sure to restart the runtime.
+
+## 3. Download and extract the Sense2Vec word vectors
+
+~~~
+!wget https://github.com/explosion/sense2vec/releases/download/v1.0.0/s2v_reddit_2015_md.tar.gz
+!tar -xvf  s2v_reddit_2015_md.tar.gz
+!ls s2v_old
+~~~
+
+## 4. Import libraries and initialize Questgen
+
+Import the necessary libraries and initialize Questgen using the following Python code:
+
+~~~
+import nltk
+from pprint import pprint
+from Questgen import main
+qg = main.QGen()
+~~~
+
+## 5. Upload your zip file
+
+Upload your zip file and run the remaining code block to generate the CSV file.
+
+## 6. Install libraries for Hugging Face
+
+Install the necessary libraries to upload the dataset to Hugging Face using the following command:
+
+~~~
+!pip install -q datasets transformers sentence_transformers faiss-gpu
+~~~
+Follow the necessary steps according to the Colab IPython notebook file to push the dataset to Hugging Face. Make sure to create a Hugging Face dataset and copy the tokens accordingly.
+
+## 7. Train the chatbot
+
+Run the Fine_Tune_Llama2.ipynb file. Make sure to change the Hugging Face token and the Hugging Face model. Create a new model and use a base model Llama 2 of your choice the official one requires hugginface pro account to fine-tune the LLM model for your domain. After training, make sure to push to Hugging Face. This training can be done over and over (Use different dataset dont train with the same) to refine results and get a better outcome.
+
+
+
+## Contributing 
 Contributions are welcome! Please read the contributing guidelines to get started.
+
+## References
+
+[1]: Questgen: An Open-Source Question Generation Library. Ramsri Goutham Golla
+. (2023). *GitHub repository*. https://github.com/ramsrigouthamg/Questgen.ai
+
+[2]: Fine-Tune Llama2Base model used: "NousResearch/Llama-2-7b-chat-hf"
+
+[3]: Hugging Face: A Platform for Natural Language Processing Models. (2023). *Hugging Face*. https://huggingface.co/
+
 
 ## Necessary links below:
 
