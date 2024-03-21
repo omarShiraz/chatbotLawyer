@@ -12,7 +12,7 @@ The chatbot can be used in [Discord](https://discord.com/oauth2/authorize?client
 
 ## Installation steps for Domain Specific Dataset creation
 
-## 1. Clone the Questgen repository and install dependencies
+### 1. Clone the Questgen repository and install dependencies
 
 Clone the Questgen repository to your Colab environment and install the necessary dependencies using the following command:
 
@@ -20,7 +20,7 @@ Clone the Questgen repository to your Colab environment and install the necessar
 !pip install --upgrade --verbose git+https://github.com/omarShiraz/Questgen.ai.git
 ~~~
 
-## 2. Install other dependencies
+### 2. Install other dependencies
 
 Install all other dependencies using the following commands:
 
@@ -36,7 +36,7 @@ Install all other dependencies using the following commands:
 ~~~
 After installing these dependencies, make sure to restart the runtime.
 
-## 3. Download and extract the Sense2Vec word vectors
+### 3. Download and extract the Sense2Vec word vectors
 
 ~~~
 !wget https://github.com/explosion/sense2vec/releases/download/v1.0.0/s2v_reddit_2015_md.tar.gz
@@ -44,7 +44,7 @@ After installing these dependencies, make sure to restart the runtime.
 !ls s2v_old
 ~~~
 
-## 4. Import libraries and initialize Questgen
+### 4. Import libraries and initialize Questgen
 
 Import the necessary libraries and initialize Questgen using the following Python code:
 
@@ -55,11 +55,11 @@ from Questgen import main
 qg = main.QGen()
 ~~~
 
-## 5. Upload your zip file
+### 5. Upload your zip file
 
 Upload your zip file and run the remaining code block to generate the CSV file.
 
-## 6. Install libraries for Hugging Face
+### 6. Install libraries for Hugging Face
 
 Install the necessary libraries to upload the dataset to Hugging Face using the following command:
 
@@ -68,11 +68,13 @@ Install the necessary libraries to upload the dataset to Hugging Face using the 
 ~~~
 Follow the necessary steps according to the Colab IPython notebook file to push the dataset to Hugging Face. Make sure to create a Hugging Face dataset and copy the tokens accordingly.
 
-## 7. Train the chatbot
+### 7. Train the chatbot
 
 Run the Fine_Tune_Llama2.ipynb file. Make sure to change the Hugging Face token and the Hugging Face model. Create a new model and use a base model Llama 2 of your choice the official one requires hugginface pro account to fine-tune the LLM model for your domain. After training, make sure to push to Hugging Face. This training can be done over and over (Use different dataset dont train with the same) to refine results and get a better outcome.
 
+## To test Chatbot Lawyer
 
+Chatbot_Lawyer_Model_Inference.ipynb better run this on colab since it take around 8GB GPU memory. Please avoid starting the server just test it by editing variable "prompt" in the ipynb file it should work fine
 
 ## Contributing 
 Contributions are welcome! Please read the contributing guidelines to get started.
