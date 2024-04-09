@@ -10,7 +10,7 @@ client = discord.Client(intents=intents)
 API_URL = 'https://2fdb-34-69-144-159.ngrok-free.app/generate_response'
 
 # Discord bot token
-TOKEN = 'MTIxOTkzNzkyOTMzMDQyNTk2Nw.GEfsXn.mPuEo5QGmgOXpm_zpZr7Y4n9K_PsUaToksZdwo'
+TOKEN = ''
 
 
 # Event: Triggered when the bot is ready
