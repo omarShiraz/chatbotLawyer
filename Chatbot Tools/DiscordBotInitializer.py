@@ -7,7 +7,7 @@ intents.message_content = True
 client = discord.Client(intents=intents)
 
 # Flask API endpoint URL
-API_URL = 'https://2fdb-34-69-144-159.ngrok-free.app/generate_response'
+API_URL = ''
 
 # Discord bot token
 TOKEN = ''
